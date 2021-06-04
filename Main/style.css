@@ -42,3 +42,26 @@ div.scrollmenu {
     height:54px;
     /* height: 8vh; */
   }
+  /* buttons for increment and decrement */
+  .customBtn{
+   
+    font-size: 18px;
+    padding: 0 10px;
+    height: 30px;
+    width: 25%;
+   text-align: center;
+  }
+  .quantity{
+    margin-top: 32px;
+  }
+
+  /* Hiding display */
+  .hideDisplay{
+    display: none;
+  }
+   /*input field that displays the quantity*/
+   .input{
+     width: 20%;
+     height: 30px;
+     text-align: center;
+   }

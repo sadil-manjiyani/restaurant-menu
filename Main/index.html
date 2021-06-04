@@ -21,6 +21,8 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+
     <title>Menu</title>
 </head>
 
@@ -29,7 +31,7 @@
 
 
 
-    <nav class="navbar navbar-light bg-danger fixed navbar-expand-lg  fixed-top navbar-custom ">
+    <nav class="navbar navbar-light bg-danger fixed navbar-expand-lg fixed-top navbar-custom ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="https://cdn2.vectorstock.com/i/1000x1000/78/26/restaurant-logo-design-vector-10067826.jpg"
@@ -41,9 +43,9 @@
                 aria-label="Toggle navigation">
                 <span>Category</span>
             </button>
-
-            <div class="scrollmenu collapse navbar-collapse nav-item dropDownList" id="navbarNavAltMarkup">
-                <a class="nav-item" href=" #Breakfast">Breakfast</a></li>
+            <!-- collapse dropDownList-->
+            <div class="scrollmenu collapse dropDownList  navbar-collapse show" id="navbarNavAltMarkup">
+                <a class="nav-item" href=" #Breakfast">Breakfast</a>
                 <a class="nav-item" href="#Starters">Starters</a>
                 <a class="nav-item" href="#MainCourse">Main Course</a>
                 <a class="nav-item" href="#Rice">Rice</a>
@@ -57,7 +59,7 @@
     </nav>
 
 
-    <div class="container" style="margin-top: 20px;">
+    <div class="container">
         <div class="row">
             <div style="height: 60px;" id="Breakfast">
                 &nbsp;
@@ -65,19 +67,7 @@
             <div class="col-12  category" id="Breakfast">
                 Breakfast
             </div>
-            <!-- <div class="col-4">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the
-                            card's content.
-                        </p>
-                        <a href="#" class="btn btn-primary">Button</a>
-                    </div>
-                </div>
-            </div> -->
+
             <div class="col-6">
                 <div class="card">
                     <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
@@ -86,19 +76,19 @@
                         <p class="card-text">
                             RS 120
                         </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
+
+                        <button class="btn btn-primary add" id="addButton">Add</button>
+
+                        <div class="quantity hideDisplay" id="counter">
+                            <button class="btn btn-primary customBtn dec" type="button"> -
+                            </button>
+                            <input type="text" id="1" value="0" name="quantity" class="input ">
+                            <!-- <span id="value"> </span> -->
+                            <button class="btn btn-primary customBtn inc"> + </button>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -110,292 +100,49 @@
                         <p class="card-text">
                             RS 120
                         </p>
-                        <a href="#" class="btn btn-primary">Add</a>
+                        <!-- <button class="btn btn-primary">Add</button> -->
+                        <button class="btn btn-primary add">Add</button>
+                        <div class="quantity hideDisplay" id="counter">
+                            <button class="btn btn-primary customBtn dec" type="button"> -
+                            </button>
+                            <input type="text" id="2" value="0" name="quantity" class="input ">
+                            <!-- <span id="value"> </span> -->
+                            <button class="btn btn-primary customBtn inc"> + </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div style="height: 60px;" id="Starters">
-                &nbsp;
-            </div>
-            <br><br>
+
             <div class="col-12  category">
                 Starters
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
             <div style="height: 60px;" id="MainCourse">
                 &nbsp;
             </div>
             <div class="col-12  category">
                 Main Course
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
             <div style="height: 60px;" id="Rice">
                 &nbsp;
             </div>
             <div class="col-12  category">
                 Rice
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
             <div style="height: 60px;" id="Breads">
                 &nbsp;
             </div>
             <div class="col-12  category">
                 Breads
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
             <div style="height: 60px;" id="Desserts">
                 &nbsp;
             </div>
             <div class="col-12  category">
                 Desserts
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
             </div>
 
 
@@ -405,130 +152,23 @@
             <div class="col-12  category">
                 Beverages and Icecreams
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
             <div style="height: 60px;" id="Salads">
                 &nbsp;
             </div>
             <div class="col-12  category">
                 Salads
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <img src="https://picsum.photos/100" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Masala Dosa</h5>
-                        <p class="card-text">
-                            RS 120
-                        </p>
-                        <a href="#" class="btn btn-primary">Add</a>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </div>
 
 
-    <!--Exiting from Category Toggle-->
-    <script>const navLinks = document.querySelectorAll('.nav-item')
-        const menuToggle = document.getElementById('navbarNavAltMarkup')
-        const bsCollapse = new bootstrap.Collapse(menuToggle)
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => { bsCollapse.toggle() })
-        })
-    </script>
 
 
-    <!--Counter Button -->
-    <div class="quantity">
-        <button class="btn min-btn disable" type="button"> - </button>
-        <input type="text" id="quantity" value="1">
-        <button class="btn plus-btn" type="button"> + </button>
 
-    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
