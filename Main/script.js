@@ -79,7 +79,8 @@ for (var i = 0; i < customBtn.length; i++) {
     incDecButton.addEventListener('click', (event) => {
         quantity = input.value;
         console.log("Quantity=" + quantity)
-
+        // setQuantity();
+        appendToCart();
     })
 
 }
@@ -104,19 +105,35 @@ function appendToCart() {
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     cell5 = row.insertCell(4);
+
+
     cell1.innerHTML = count;
     cell2.innerHTML = itemName;
     cell3.innerHTML = quantity;
     cell4.innerHTML = price;
-    cell5.innerHTML = "<button class='removeButton' >" + "remove" + "</button>"
+    cell5.innerHTML = `<button class='removeButton' id=${count} >` + `remove` + `</button>`;
 
+
+    removeBtn = document.getElementsByClassName('removeButton');
+    for (var i = 0; i < removeBtn.length; i++) {
+        var removeButton = removeBtn[i];
+        removeButton.addEventListener('click', (event) => {
+            console.log(removeButton.id)
+            table.deleteRow(removeButton.id)
+        })
+
+    }
 
 
 }
 
+
+
+// function setQuantity() {
+//     cell3.innerHTML = quantity;
+// }
 // // Deleting row using sr number Sr number available in count
 // function removeRow(count) {
 //     table.deleteRow(count);
 // }
-
 
