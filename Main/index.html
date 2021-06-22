@@ -21,6 +21,7 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <title>Menu</title>
@@ -85,7 +86,7 @@
                             <i class="fas fa-rupee-sign"></i> 80
                         </p>
 
-                        <button class="btn btn-primary add" id="addButton">Add</button>
+                        <button class="btn btn-primary add cart" id="1">Add</button>
 
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
@@ -110,7 +111,7 @@
                             <i class="fas fa-rupee-sign"></i> 60
                         </p>
                         <!-- <button class="btn btn-primary">Add</button> -->
-                        <button class="btn btn-primary add">Add</button>
+                        <button class="btn btn-primary add cart" id="2">Add</button>
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
                             </button>
@@ -132,7 +133,7 @@
                             <i class="fas fa-rupee-sign"></i> 90
                         </p>
 
-                        <button class="btn btn-primary add" id="addButton">Add</button>
+                        <button class="btn btn-primary add cart" id="3">Add</button>
 
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
@@ -157,7 +158,7 @@
                             <i class="fas fa-rupee-sign"></i> 100
                         </p>
                         <!-- <button class="btn btn-primary">Add</button> -->
-                        <button class="btn btn-primary add">Add</button>
+                        <button class="btn btn-primary add cart" id="4">Add</button>
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
                             </button>
@@ -185,7 +186,7 @@
                             <i class="fas fa-rupee-sign"></i> 160
                         </p>
 
-                        <button class="btn btn-primary add" id="addButton">Add</button>
+                        <button class="btn btn-primary add cart" id="5">Add</button>
 
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
@@ -206,10 +207,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Kebab</h5>
                         <p class="card-price">
-                            <i class="fas fa-rupee-sign"></i> 100
+                            <i class="fas fa-rupee-sign"></i>100
+
                         </p>
                         <!-- <button class="btn btn-primary">Add</button> -->
-                        <button class="btn btn-primary add">Add</button>
+                        <button class="btn btn-primary add cart" id="6">Add</button>
                         <div class="quantity hideDisplay" id="counter">
                             <button class="btn btn-primary customBtn dec" type="button"> -
                             </button>
@@ -293,7 +295,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <table class="table table-striped" id="table">
+                    <!-- <table class="table table-striped" id="table">
                         <thead>
                             <tr>
                                 <th scope="col">Sr No.</th>
@@ -304,23 +306,42 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <tr>
+                             <tr>
                                 <th scope="row">1</th>
                                 <td>pizza</td>
                                 <td>120</td>
                                 <td>2</td>
                                 <td><button>remove</button></td>
                             </tr> -->
-                            <!-- <tr>
+                    <!-- <tr>
                                 <th scope="row">2</th>
                                 <td>Burger</td>
                                 <td>160</td>
                                 <td>1</td>
                                 <td><button>remove</button></td>
-                            </tr> -->
+                            </tr> 
 
                         </tbody>
-                    </table>
+                    </table> -->
+
+                    <div class="cartContainer">
+                        <div class="row">
+                            <div class="col-3 heading">Item</div>
+                            <div class="col-3 heading">Price</div>
+                            <div class="col-3 heading">Quantity</div>
+                            <div class="col-3 heading"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="total">
 
                 </div>
                 <div class="modal-footer">
